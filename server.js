@@ -1,6 +1,17 @@
 const express = require('express')
 const cors = require('cors')
 const bodyParser = require('body-parser');
+const app = express()
 
-const server = express()
-server.listen(8080, () => console.log('Express started at http://localhost:8080'))
+app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.json());
+app.use(cors());
+
+app.get("/", function(req, res){
+    return res.send('Ola Mundo!')
+})
+
+
+
+
+app.listen(8080, () => console.log('//Server started at http://localhost:8080'))

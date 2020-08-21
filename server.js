@@ -15,3 +15,4 @@ app.get("/", function(req, res){
 
 
 app.listen(8080, () => console.log('//Server started at http://localhost:8080'))
+//use "start": "nodemon server.js", and start npm run start

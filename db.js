@@ -10,7 +10,7 @@ let db = new sqlite3.Database('database.db', sqlite3.OPEN_READWRITE , (err) => {
 
 
 db.serialize(() => {
-    db.each(`SELECT PlaylistId as id,
+    db.get(`SELECT PlaylistId as id,
                     Name as name
              FROM playlists`, (err, row) => {
         if (err) {

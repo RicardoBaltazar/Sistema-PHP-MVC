@@ -8,7 +8,14 @@ let db = new sqlite3.Database('database.db',(err) => {
 
 });
 
+db.run(`CREATE TABLE IF NOT EXISTS clients (
+    id INTEGER PRIMARY KEY AUTOINCREMENT);`, function(err){
+        if(err){
+            return console.log(err.message)
+        }
 
+        console.log('table created')
+    })
 
 
 db.close((err) => {

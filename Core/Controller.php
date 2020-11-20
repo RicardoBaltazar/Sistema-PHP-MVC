@@ -8,12 +8,12 @@ Class Controller{
 
     }
 
-    public function CarregarTemplate($nomeView, $dadosModel){
-        $this->dados =$dadosModel;
+    public function carregarTemplate($nomeView, $dadosModel = array()){
+        $this->dados = $dadosModel;
         require_once 'View/template.php';
     }
 
-    public function CarregarViewNoTemplate(){
+    public function carregarViewNoTemplate($nomeView, $dadosModel = array()){
         extract($dadosModel);
         require_once 'View/'.$nomeView.'.php';
     }

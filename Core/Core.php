@@ -32,6 +32,7 @@ Class Core{
         }else {
             $controller = 'homeController';
             $metodo = 'index';
+            $parametros = array();
         } 
 
         $caminho = 'SISTEMA-PHP-MVC/Controller/'.$controller.'.php';
